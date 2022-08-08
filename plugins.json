@@ -1,0 +1,21 @@
+[
+    {
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/afifn/cloudstream-provider-afif",
+        "fileSize": 13257,
+        "status": 1,
+        "language": "id",
+        "authors": [
+            "Afif"
+        ],
+        "tvTypes": [
+            "Anime",
+            "OVA",
+            "AnimeMovie"
+        ],
+        "version": 1,
+        "internalName": "AniChin",
+        "url": "https://raw.githubusercontent.com/afifn/cloudstream-provider-afif/builds/AniChin.cs3",
+        "name": "AniChin"
+    }
+]
