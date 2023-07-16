@@ -21,7 +21,7 @@ class AniChinProvider : MainAPI() { // all providers must be an instance of Main
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse {
         val document = app.get(request.data + page).document
-        val home = document.select("div.post-show > article, div.relat > article").mapNotNull {
+        val home = document.select("div.excstf > article").mapNotNull {
             it.toSearchResult()
         }
         return newHomePageResponse(request.name, home)
