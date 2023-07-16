@@ -1,6 +1,7 @@
 # `Cloudstream3 Plugin Repo Template`
 
 Template for a [Cloudstream3](https://github.com/recloudstream) plugin repo
+<<<<<<< HEAD
 
 **⚠️ Make sure you check "Include all branches" when using this template**
 
@@ -19,3 +20,5 @@ This template includes 1 example plugin.
 
 This template as well as the gradle plugin and the whole plugin system is **heavily** based on [Aliucord](https://github.com/Aliucord).
 *Go use it, it's a great mobile discord client mod!*
+=======
+>>>>>>> df3efba (anichin provider)
