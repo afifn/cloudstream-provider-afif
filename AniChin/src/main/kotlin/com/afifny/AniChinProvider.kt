@@ -1,13 +1,6 @@
 package com.afifny
 
-import com.lagradost.cloudstream3.HomePageResponse
-import com.lagradost.cloudstream3.TvType
-import com.lagradost.cloudstream3.MainAPI
-import com.lagradost.cloudstream3.MainPageData
-import com.lagradost.cloudstream3.MainPageRequest
-import com.lagradost.cloudstream3.SearchResponse
-import com.lagradost.cloudstream3.app
-import com.lagradost.cloudstream3.mainPageOf
+import com.lagradost.cloudstream3.*
 
 class AniChinProvider : MainAPI() { // all providers must be an instance of MainAPI
     override var mainUrl = "https://anichin.top/"
@@ -27,10 +20,11 @@ class AniChinProvider : MainAPI() { // all providers must be an instance of Main
 
     override suspend fun getMainPage(page: Int, request: MainPageRequest): HomePageResponse? {
         val document = app.get(request.data+page).document
-        val home = document.select("div.")
-        return super.getMainPage(page, request)
+        val home = document.select("div.post-show > article, div.relat > article").mapNotNull {
+            it.allElements
+        }
+        return newHomePageResponse(request.name, home)
     }
-
     override suspend fun search(query: String): List<SearchResponse> {
         return listOf<SearchResponse>()
     }
