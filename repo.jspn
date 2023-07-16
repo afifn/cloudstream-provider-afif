@@ -1,0 +1,8 @@
+{
+  "name": "Afif Provider Repo",
+  "description": "Cloudstream asal-asalh tes",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/afifn/cloudstream-provider-afif/builds/plugins.json"
+  ]
+}
